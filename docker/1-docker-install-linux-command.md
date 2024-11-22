@@ -21,3 +21,12 @@ sudo rm -rf /var/lib/containerd
 sudo rm /etc/apt/sources.list.d/docker.list
 sudo rm /etc/apt/keyrings/docker.asc
 ```
+
+```bash
+docker ps
+```
+
+## Docker nginx
+```bash
+docker run -d nginx
+```
