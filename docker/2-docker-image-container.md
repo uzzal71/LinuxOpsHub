@@ -40,18 +40,34 @@ docker ps
 docker ps -a
 ```
 
-### docker running container stop
+### Stop docker container
 ```bash
 docker stop [containerId or containerName]
+docker ps -al
 ```
 
+### Delete docker container
 ```bash
+docker rm [containerId or containerName]
+docker system prune # remove all container
+doker ps
 ```
 
+### Enter container
 ```bash
+docker exec -it [containerId or containername] bash
+# interactive mode --> -it
+ls
+apt update && sudo apt upgrade -y
+vim hello.txt
+realpath hello.txt
 ```
 
+### File copy docker to host machine
 ```bash
+docker cp mynginx:/hello.txt .
+vim devops.txt
+docker cp docker.txt mynginx
 ```
 
 ```bash
