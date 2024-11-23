@@ -1,78 +1,4 @@
 ## Docker image & container
-### testing docker
-```bash
-docker run hello-world
-```
-
-### docker run nginx
-```bash
-docker run nginx
-docker run -p 80:80 nginx
-```
-
-### Port Mapping
-```bash
--p 80:80
-first 80 forward host ubuntu
-second 80 forwad container
-Port Mapping
-```
-
-```bash
-docker run -p 8090:80 nginx
-ip:8090
-```
-
-### docker daemon
-```bash
-docker run -d -p 8090:80 nginx
-docker ps
-```
-
-### container name
-```bash
-docker run -d --name mynginx -p 8090:80 nginx
-docker ps
-```
-
-### total container
-```bash
-docker ps -a
-```
-
-### Stop docker container
-```bash
-docker stop [containerId or containerName]
-docker ps -al
-```
-
-### Delete docker container
-```bash
-docker rm [containerId or containerName]
-docker system prune # remove all container
-doker ps
-```
-
-### Enter container
-```bash
-docker exec -it [containerId or containername] bash
-# interactive mode --> -it
-ls
-apt update && sudo apt upgrade -y
-vim hello.txt
-realpath hello.txt
-```
-
-### File copy docker to host machine
-```bash
-docker cp mynginx:/hello.txt .
-vim devops.txt
-docker cp docker.txt mynginx
-```
-
-
-
-### Video
 ```bash
 docker
 docker run hello-world
@@ -106,27 +32,89 @@ docker exec -t containerId or containerName bash
 ls
 cat /etc/os-release
 apt update && apt install vim -y
+ls
+vim hello.txt
+"hello world!"
+ls
+realpath hello.txt
+exit
 ```
 
+### Host To Docker OR Docker to Host
 ```bash
+docker cp
+docker ps
+docker cp nginx1:/hello.txt . [source--> nginx1:/hello.txt, target: . or /tmp/]
+vim hello.txt
+vim hello2.txt
+docker cp hello2.txt nginx1:/
+docker exec -t containerId or containerName bash
+ls
+cd /etc
+cd /nginx
+ls
+cd conf.d/
+default.conf
+vim default.conf
+exit
 ```
 
+### html file cerate inside vm    
 ```bash
+vim class2.html
+<h1>hello world! class2</h1>
+docker cp class2.html nginx1:/usr/share/nginx/html/
+open browser
+[ip-address or localhost]:8090/class2.html
 ```
 
+## Running container image create inside VM or Host machine
 ```bash
+docker commit nginx1 nginx1-v1
+docker images
+docker run -d -p 8092:80 nginx1-v1
+docker ps
+open browser
+[ip-address or localhost]:8092/class2.html
 ```
 
+### Image save
 ```bash
+ls
+docker save nginx1-v1 | gzip > nginx1-v1.tar.gz
+ls
+du -sh nginx1-v1.tar.gz
+docker ps
+docker rm -f containerId or containerName
+docker ps
+docker images
+docker rmi imageId
+docker
+```
+### Image load
+```bash
+docker load -i nginx1-v1.tar.gz
+docker images
+docker run -d  --name imported-cont -p 8090:80 nginx1-v1
+docker ps
+open browser
+[ip-address or localhost]:8090/class2.html
 ```
 
+### VM Or Host Machine reboot
 ```bash
+reboot
+reboot success then connect again
+docker ps
+container kill show
 ```
-
+### Container restart auto when system reboot
 ```bash
-```
-
-```bash
+docker run -d  --name imported-cont --restart=always -p 8090:80 nginx1-v1
+docker ps
+reboot
+reboot success then connect again
+docker ps
 ```
 
 ```bash
