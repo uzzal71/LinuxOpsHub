@@ -27,6 +27,7 @@ docker run -d --name nginx3 -p 8090:80 nginx
 docker ps
 ```
 
+### Docker inside file create
 ```bash
 docker exec -t containerId or containerName bash
 ls
@@ -40,7 +41,7 @@ realpath hello.txt
 exit
 ```
 
-### Host To Docker OR Docker to Host
+### Host To Docker OR Docker to Host File Copy
 ```bash
 docker cp
 docker ps
@@ -59,7 +60,7 @@ vim default.conf
 exit
 ```
 
-### html file cerate inside vm    
+### html file cerate inside vm or host machine
 ```bash
 vim class2.html
 <h1>hello world! class2</h1>
@@ -108,6 +109,7 @@ reboot success then connect again
 docker ps
 container kill show
 ```
+
 ### Container restart auto when system reboot
 ```bash
 docker run -d  --name imported-cont --restart=always -p 8090:80 nginx1-v1
