@@ -70,10 +70,42 @@ vim devops.txt
 docker cp docker.txt mynginx
 ```
 
+
+
+### Video
 ```bash
+docker
+docker run hello-world
+docker run nginx
+docker run -p 80:80 nginx
+docker run -p 8090:80 nginx
+docker run -p 8091:80 nginx
+docker run -d -p 8090:80 nginx
+docker run -d -p 8091:80 nginx
+docker ps
+docker ps -a
+docker run -d --name nginx1 -p 8090:80 nginx
+docker run -d --name nginx2 -p 8091:80 nginx
+docker ps
+docker ps -a
+docker ps
+docker stop containerId or containerName
+docker ps
+docker ps -a
+docker rm containerId or containerName
+docker ps
+docker ps -al
+docker system prune
+docker ps -a
+docker run -d --name nginx3 -p 8090:80 nginx
+docker ps
 ```
 
 ```bash
+docker exec -t containerId or containerName bash
+ls
+cat /etc/os-release
+apt update && apt install vim -y
 ```
 
 ```bash
