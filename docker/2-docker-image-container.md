@@ -117,29 +117,8 @@ reboot success then connect again
 docker ps
 ```
 
+### Docker Logs
 ```bash
-```
-
-```bash
-```
-
-```bash
-```
-
-```bash
-```
-
-```bash
-```
-
-```bash
-```
-
-```bash
-```
-
-```bash
-```
-
-```bash
+docker logs containerId or containerName
+docker logs -f containerId or containerName
 ```
