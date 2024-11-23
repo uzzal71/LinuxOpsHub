@@ -30,3 +30,5 @@ docker ps
 ```bash
 docker run -d nginx
 ```
+
+### Docker image create
