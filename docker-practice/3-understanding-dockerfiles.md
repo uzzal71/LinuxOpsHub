@@ -19,7 +19,7 @@ RUN cp /tmp/hello.py /tmp/hello.py
 ```bash
 docker build . -t apppy
 docker images
-docker run -d -p 8000:8000 apppy
+docker run -d -p 8090:8000 apppy
 docker images
 ```
 
@@ -32,3 +32,10 @@ docker images
 docker login
 docker push uzzal71/apppy:1.0
 ```
+
+### React app dockerfile
+```bash
+docker exec -it
+```
+
+### Multi Stage Build
