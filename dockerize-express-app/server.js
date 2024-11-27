@@ -1,9 +1,9 @@
 import app from "./app.js";
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 
 // Define your development and production hosts
-const APP_URL = `${process.env.APP_URL}/${PORT}`;
+const APP_URL = `${process.env.APP_URL}`;
 
 app.get("/", (req, res) => {
   res.json({
