@@ -23,11 +23,13 @@ docker run -d -p 8090:8000 apppy
 docker images
 ```
 
+### Docker image tag add
 ```bash
 docker tag apppy uzzal71/apppy:1.0
 docker images
 ```
 
+### Docker login & push image in dockerhub
 ```bash
 docker login
 docker push uzzal71/apppy:1.0
