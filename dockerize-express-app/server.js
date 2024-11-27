@@ -1,12 +1,9 @@
 import app from "./app.js";
 
-const port = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3001;
 
 // Define your development and production hosts
-const APP_URL = `${process.env.APP_URL}`;
-
-// Determine the environment
-const environment = process.env.APP_ENV || "development";
+const APP_URL = `${process.env.APP_URL}/${PORT}`;
 
 app.get("/", (req, res) => {
   res.json({
@@ -22,6 +19,6 @@ app.get("/", (req, res) => {
   });
 });
 
-app.listen(port, () => {
-  console.log(`Server listening on port ${port}`);
+app.listen(PORT, () => {
+  console.log(`Server listening on port ${PORT}`);
 });
