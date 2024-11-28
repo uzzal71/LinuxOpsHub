@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./Post.module.css";
 
 const Post = () => {
@@ -36,13 +37,13 @@ const Post = () => {
         <footer className={styles.footer}>
           <span className={styles.readMore}>
             Read more at{" "}
-            <a
+            <Link
               href="https://www.prothomalo.com/bangladesh/district/tb3sezcgna"
               target="_blank"
               rel="noreferrer"
             >
               Prothom Alo
-            </a>
+            </Link>
           </span>
         </footer>
       </div>

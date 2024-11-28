@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./BodyTop.module.css";
 
 const BodyTop = () => {
@@ -6,21 +7,21 @@ const BodyTop = () => {
     <div className={styles.appinfo}>
       <div>
         <span>For the best experience use </span>
-        <a
-          href="https://bdshorts.com/mobile"
+        <Link
+          to="https://bdshorts.com/mobile"
           style={{ color: "white", appearance: "none", fontWeight: "600" }}
         >
           bdshorts
-        </a>
+        </Link>
         <span> app on your smartphone</span>
       </div>
       <div className={styles.store}>
-        <a href="#">
+        <Link to="#">
           <img src="/appstore.png" alt="app store" height={52} width={140} />
-        </a>
-        <a href="#">
+        </Link>
+        <Link to="#">
           <img src="/playstore.png" alt="play store" height={52} width={140} />
-        </a>
+        </Link>
       </div>
     </div>
   );
