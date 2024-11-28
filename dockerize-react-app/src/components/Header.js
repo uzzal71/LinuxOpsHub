@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./Header.module.css";
 import MenuToggle from "./MenuToggle";
 
@@ -8,12 +9,12 @@ const Header = () => {
       <MenuToggle />
 
       <div className={styles.logo}>
-        <a href="/">bdshorts</a>
+        <Link to="/">bdshorts</Link>
       </div>
 
       <div className={styles.authLinks}>
-        <a href="/login">Login</a>
-        <a href="/signup">Signup</a>
+        <Link to="/login">Login</Link>
+        <Link to="/signup">Signup</Link>
       </div>
     </header>
   );

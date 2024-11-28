@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { IoCloseOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
 import styles from "./MenuToggle.module.css";
 
 const MenuToggle = () => {
@@ -28,49 +29,49 @@ const MenuToggle = () => {
             <h6>Categories</h6>
             <ul>
               <li>
-                <a href="/national">Bangladesh</a>
+                <Link to="/national">Bangladesh</Link>
               </li>
               <li>
-                <a href="/business">Business</a>
+                <Link to="/business">Business</Link>
               </li>
               <li>
-                <a href="/politics">Politics</a>
+                <Link to="/politics">Politics</Link>
               </li>
               <li>
-                <a href="/sports">Sports</a>
+                <Link to="/sports">Sports</Link>
               </li>
               <li>
-                <a href="/technology">Technology</a>
+                <Link to="/technology">Technology</Link>
               </li>
               <li>
-                <a href="/startups">Startups</a>
+                <Link to="/startups">Startups</Link>
               </li>
               <li>
-                <a href="/entertainment">Entertainment</a>
+                <Link to="/entertainment">Entertainment</Link>
               </li>
               <li>
-                <a href="/international">International</a>
+                <Link to="/international">International</Link>
               </li>
               <li>
-                <a href="/automobile">Automobile</a>
+                <Link to="/automobile">Automobile</Link>
               </li>
               <li>
-                <a href="/science">Science</a>
+                <Link to="/science">Science</Link>
               </li>
               <li>
-                <a href="/travel">Travel</a>
+                <Link to="/travel">Travel</Link>
               </li>
               <li>
-                <a href="/miscellaneous">Miscellaneous</a>
+                <Link to="/miscellaneous">Miscellaneous</Link>
               </li>
               <li>
-                <a href="/fashion">Fashion</a>
+                <Link to="/fashion">Fashion</Link>
               </li>
               <li>
-                <a href="/education">Education</a>
+                <Link to="/education">Education</Link>
               </li>
               <li>
-                <a href="/health-fitness">Health & Fitness</a>
+                <Link to="/health-fitness">Health & Fitness</Link>
               </li>
             </ul>
           </div>

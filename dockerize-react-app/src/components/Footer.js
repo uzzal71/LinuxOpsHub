@@ -1,5 +1,6 @@
 import React from "react";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import styles from "./Footer.module.css";
 
 const Footer = () => {
@@ -8,27 +9,27 @@ const Footer = () => {
       <div className={styles.container}>
         <div className={styles.logoArea}>
           <div className={styles.logo}>
-            <a href="/">bdshorts</a>
+            <Link to="/">bdshorts</Link>
           </div>
           <p>bdshorts pte. Ltd.</p>
           <p>Copyright &copy; {new Date().getFullYear()}</p>
         </div>
         <div className={styles.separator}></div>
         <div className={styles.menu}>
-          <a href="/contact-us">Contact Us</a>
-          <a href="/terms-conditions">Terms & conditions</a>
-          <a href="/privacy-policies">Privacy Policies</a>
+          <Link to="/contact-us">Contact Us</Link>
+          <Link to="/terms-conditions">Terms & conditions</Link>
+          <Link to="/privacy-policies">Privacy Policies</Link>
         </div>
         <div className={styles.socialIcon}>
-          <a href="/about">
+          <Link to="/about">
             <FaFacebookF />
-          </a>
-          <a href="/about">
+          </Link>
+          <Link to="/about">
             <FaTwitter />
-          </a>
-          <a href="/about">
+          </Link>
+          <Link to="/about">
             <FaInstagram />
-          </a>
+          </Link>
         </div>
       </div>
     </section>
