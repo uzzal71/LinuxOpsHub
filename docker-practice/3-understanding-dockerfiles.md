@@ -37,7 +37,7 @@ docker push uzzal71/apppy:1.0
 
 ### React app dockerfile
 ```bash
-docker exec -it
+docker exec -it [containerId] bash
 ```
 
 ### Multi Stage Build
