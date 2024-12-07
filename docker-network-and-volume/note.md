@@ -55,3 +55,9 @@ show databases;
 create database dbecommerces;
 
 ./mysql-start.sh
+
+docker volume ls
+docker volume create mysql-vol
+docker volume ls
+docker inspect mysql-vol
+docker run --name=mysql-server -v mysql-vol:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=secret -d mysql
