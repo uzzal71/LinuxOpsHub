@@ -35,3 +35,23 @@ docker ps
 docker exec -it [containerIn] bash
 cd /usr/share/nginx/html
 you can see index2.html file
+
+
+mkdir mysql-volumes
+cd mysql-volumes
+mkdir data
+chmod 777 -Rf data/
+docker run --name mysql-server -v /home/uzzal/Desktop/LinuxOpsHub/docker-network-and-volume/mysql-volumes/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=secret -d mysql
+
+vim mysql-start.sh
+chmod +x mysql-start.sh
+./mysql-start.sh
+
+docker ps
+docker exec -it [containerId] bash
+mysql -u root -p
+secret
+show databases;
+create database dbecommerces;
+
+./mysql-start.sh
