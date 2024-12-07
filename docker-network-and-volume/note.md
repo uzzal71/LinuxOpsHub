@@ -27,3 +27,11 @@ docker ps
 docker exec -it [containerIn] bash
 cd /usr/share/nginx/html
 touch index2.html
+
+docker ps
+docker rm -f [containerId]
+docker run -d -p 8090:80 --name=nginx-server -v nginx-vol:/usr/share/nginx/html nginx
+docker ps
+docker exec -it [containerIn] bash
+cd /usr/share/nginx/html
+you can see index2.html file
